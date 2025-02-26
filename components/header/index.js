@@ -46,7 +46,7 @@ function Header({ lang, chainName, setChainName }) {
               </span>
               {setChainName ? (
                 <input
-                  placeholder="ETH, Fantom, ..."
+                  placeholder="Celo, Alfajores, Baklava"
                   autoFocus
                   value={chainName}
                   onChange={(e) => {
@@ -73,7 +73,7 @@ function Header({ lang, chainName, setChainName }) {
                 />
               ) : (
                 <input
-                  placeholder="ETH, Fantom, ..."
+                  placeholder="Celo, Alfajores, Baklava"
                   autoFocus
                   defaultValue={search ?? ""}
                   onKeyUp={(event) => {

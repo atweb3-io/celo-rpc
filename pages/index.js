@@ -27,10 +27,10 @@ function Home({ chains }) {
   return (
     <>
       <Head>
-        <title>ChainList</title>
+        <title>Celo RPC List</title>
         <meta
           name="description"
-          content="ChainList is a list of RPCs for EVM(Ethereum Virtual Machine) networks. Use the information to connect your wallets and Web3 middleware providers to the appropriate Chain ID and Network ID. Find the best RPC for both Mainnet and Testnet to connect to the correct chain"
+          content="Celo RPC List is a specialized tool for Celo blockchain networks. Use the information to connect your wallets and Web3 middleware providers to Celo Mainnet and its testnets (Alfajores and Baklava). Find the best RPC to connect to the Celo blockchain."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

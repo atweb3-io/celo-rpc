@@ -101,9 +101,12 @@ export async function generateChainData() {
     return acc;
   }, {});
 
+  // Only include Celo chains (Mainnet: 42220, Alfajores: 44787, Baklava: 62320)
+  const celoChainIds = [42220, 44787, 62320];
+  
   const sortedChains = chains
-    .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
-    .concat(overwrittenChains)
+    .filter((c) => celoChainIds.includes(parseInt(c.chainId)) && c.status !== "deprecated" && !overwrittenIds[c.chainId])
+    .concat(overwrittenChains.filter(c => celoChainIds.includes(parseInt(c.chainId))))
     .map((chain) => populateChain(chain, chainTvls))
     .sort((a, b) => {
       return (b.tvl ?? 0) - (a.tvl ?? 0);
